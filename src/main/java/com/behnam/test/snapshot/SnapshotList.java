@@ -2,7 +2,13 @@ package com.behnam.test.snapshot;
 
 import java.util.List;
 
-interface SnapshotList<E> extends List<E> {
+
+/**
+ * A <pre>List</pre> that offers the possibility to create snapshots of the
+ * elements currently stored in it. <pre>SnapshotList</pre> may not remove
+ * existing elements and it can only grow by appending elements, not inserting.
+ */
+public interface SnapshotList<E> extends List<E> {
 
     /**
      * Removes all versions prior to the specified one.

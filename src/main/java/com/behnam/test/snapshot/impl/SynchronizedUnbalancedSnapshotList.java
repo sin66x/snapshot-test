@@ -34,7 +34,7 @@ public class SynchronizedUnbalancedSnapshotList<E> extends Vector<E> implements 
 
     @Override
     public synchronized int snapshot() {
-        snapshots.put(version, new Vector<E>(this));
+        snapshots.put(version, new Vector<>(this));
         version++;
         return version;
     }
